@@ -1,17 +1,17 @@
-﻿static int BinarySearch(int[] input, int item)
+﻿static int BinarySearch(int[] input, int itemToSearch)
 {
     Array.Sort(input);
-    int low = 0;
-    int high = input.Length - 1;
+    int smallestElement = 0;
+    int largestElement = input.Length - 1;
 
-    while (low <= high)
+    while (smallestElement <= largestElement)
     {
-        int mid = (low + high) / 2;
-        int guess = input[mid];
+        int middleElement = (smallestElement + largestElement) / 2;
+        int pickedElement = input[middleElement];
 
-        if (guess == item) return mid;
-        if (guess > item) high = mid - 1;
-        else low = mid + 1;
+        if (pickedElement == itemToSearch) return middleElement;
+        if (pickedElement > itemToSearch) largestElement = middleElement - 1;
+        else smallestElement = middleElement + 1;
     }
 
     return -1;
