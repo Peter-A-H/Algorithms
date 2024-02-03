@@ -1,8 +1,8 @@
 ﻿namespace Binary_Search;
 
-public class BinarySearch
+public static class BinarySearch
 {
-    public static int Search(int[] input, int itemToSearch)
+    public static object Search(int[] input, int itemToSearch)
     {
         Array.Sort(input);
         int smallestElement = 0;
@@ -18,6 +18,6 @@ public class BinarySearch
             else smallestElement = middleElement + 1;
         }
 
-        return -1;
+        return "null";
     }
 }

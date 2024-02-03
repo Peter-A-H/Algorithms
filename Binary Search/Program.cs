@@ -4,3 +4,4 @@ int[] inputArr = [9, 1, 7, 3, 5];
 
 Console.WriteLine(BinarySearch.Search(inputArr, 3)); //1
 Console.WriteLine(BinarySearch.Search(inputArr, 9)); //4
+Console.WriteLine(BinarySearch.Search(inputArr, 8)); //null
