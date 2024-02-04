@@ -2,7 +2,7 @@
 
 public static class Math
 {
-    private static int FindSmallest(List<int> input)
+    private static int FindSmallestElement(List<int> input)
     {
         int smallestElement = input[0];
         int smallestIndex = 0;
@@ -26,7 +26,7 @@ public static class Math
 
         for (int i = 0; i < count; i++)
         {
-            int indexOfSmallestElement = FindSmallest(input);
+            int indexOfSmallestElement = FindSmallestElement(input);
             int smallestElement = input.ElementAt(indexOfSmallestElement);
             sortedArray[i] = smallestElement;
             input.RemoveAt(indexOfSmallestElement);
